@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Friendly_id gem will be utilized to make custom routes
 gem 'friendly_id', '~> 5.1.0'
+
+# Authentication gem - implementation of features
+gem 'devise', '~> 4.4', '>= 4.4.3'
