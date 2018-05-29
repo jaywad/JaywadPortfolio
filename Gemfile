@@ -61,3 +61,5 @@ gem 'friendly_id', '~> 5.1.0'
 
 # Authentication gem - implementation of features
 gem 'devise', '~> 4.4', '>= 4.4.3'
+
+gem 'bootstrap', '~> 4.1.1'
