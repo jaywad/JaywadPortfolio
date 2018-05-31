@@ -65,3 +65,6 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.1'
 
 gem 'copyright_tool', '~> 0.1.0'
+
+# Authorization gem - roles and permission for users
+gem 'petergate', '~> 1.8', '>= 1.8.1'
