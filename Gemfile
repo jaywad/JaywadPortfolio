@@ -68,3 +68,8 @@ gem 'copyright_tool', '~> 0.1.0'
 
 # Authorization gem - roles and permission for users
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+
+# Pagination helper
+gem 'kaminari', '~> 1.1', '>= 1.1.1'

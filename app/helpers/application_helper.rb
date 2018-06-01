@@ -17,6 +17,6 @@ module ApplicationHelper
 	end
 
   def copyright_generator
-    CopyrightTool::Renderer.copyright "Jamal AWAD", "| All rights reserved."
+    CopyrightTool::Renderer.copyright "Jamal AWAD", "All rights reserved."
   end
 end
