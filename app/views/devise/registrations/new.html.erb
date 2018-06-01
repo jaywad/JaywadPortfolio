@@ -5,15 +5,15 @@
       <%= devise_error_messages! %>
       <div class="row">
         <div class="col-md-6">
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-            </div>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          </div>
 
-            <div class="field">
-              <%= f.label :name %><br />
-              <%= f.text_field :name, class: "form-control" %>
-            </div>
+          <div class="field">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
         </div>
 
         <div class="col-md-6">
@@ -38,7 +38,7 @@
           </div>
 
           <div class="auth-links register-text">
-           <%= render "devise/shared/links" %>
+          <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>
