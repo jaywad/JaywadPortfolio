@@ -17,12 +17,7 @@
         </ul>
         <h4 class="text-white">Explore</h4>
         <ul class="list-unstyled">
-          <li><%= link_to 'Home', root_path, class: "text-white" %></li>
-          <li><%= link_to 'Blog', blogs_path, class: "text-white" %></li>
-          <li><%= link_to 'Portfolio', portfolios_path, class: "text-white" %></li>
-          <li><%= link_to 'About Me', about_me_path, class: "text-white" %></li> 
-          <li><%= link_to 'Contact', contact_path, class: "text-white" %></li>
-          <li><%= login_helper("text-white") %></li>
+          <li><%= navbar_helper("text-white", "li") %></li>
         </ul>
       </div>
     </div>
@@ -30,7 +25,7 @@
 </div>
 <div class="navbar navbar-dark bg-dark box-shadow">
   <div class="container d-flex justify-content-between">
-    <a href="#" class="navbar-brand d-flex align-items-center">
+    <a href="/" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
         <%= fa_icon "connectdevelop" %>
         </svg>

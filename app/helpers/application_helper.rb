@@ -19,4 +19,44 @@ module ApplicationHelper
   def copyright_generator
     CopyrightTool::Renderer.copyright "Jamal AWAD", "All rights reserved."
   end
+
+  def navbar_items
+    [
+      {
+        url: root_path,
+        title: "Home"
+      },
+      {
+        url: blogs_path,
+        title: "Blog"
+      },
+      {
+        url: portfolios_path,
+        title: "Portfolio"
+      },
+      {
+        url: about_me_path,
+        title: "About Me"
+      },
+      {
+        url: contact_path,
+        title: "Contact"
+      }
+    ]
+  end
+
+  def navbar_helper style = "", tag_type = ""
+    navbar_links = ""
+
+    navbar_items.each do |nav_item|
+      navbar_links << "<#{tag_type}><a href='#{nav_item[:url]}' class='#{style} #{active? nav_item[:url]}'>#{nav_item[:title]}</a></#{tag_type}>"
+    end
+
+    navbar_links.html_safe +
+    login_helper(style)
+  end
+
+  def active? path
+    "active" if current_page? path
+  end
 end
