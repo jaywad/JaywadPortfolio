@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-sm-8 col-md-7 py-4">
         <h4 class="text-white">About</h4>
-        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        <p class="lead text-muted">Hey there! I’m <b>Jamal Awad</b>, the creator of this website. I am completely self-taught, with a lot left to learn–and in teaching myself tech skills, I uncovered a passion for teaching others.</p>
+        <p class="lead text-muted">Since I began gaining valuable digital skills, I think I am able to make more money, pursue passions that I care about, and, ultimately, enjoy freedom and flexibility.</p>
       </div>
       <div class="col-sm-4 offset-md-1 py-4">
         <h4 class="text-white">Contact</h4>
@@ -13,7 +14,15 @@
           <li class="list-inline-item"><a href="https://www.instagram.com/jamalawd/"><%= fa_icon "instagram"%></a></li>
           <li class="list-inline-item"><a href="https://www.linkedin.com/in/jaywad/"><%= fa_icon "linkedin"%></a></li>
           <li class="list-inline-item"><p><a href="mailto:jamalawad26@gmail.com?subject=Portfolio Contact" "Email me"><%= fa_icon "at" %></a></li>
-          <li><%= login_helper('text-white') %></li>
+        </ul>
+        <h4 class="text-white">Explore</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to 'Home', root_path, class: "text-white" %></li>
+          <li><%= link_to 'Blog', blogs_path, class: "text-white" %></li>
+          <li><%= link_to 'Portfolio', portfolios_path, class: "text-white" %></li>
+          <li><%= link_to 'About Me', about_me_path, class: "text-white" %></li> 
+          <li><%= link_to 'Contact', contact_path, class: "text-white" %></li>
+          <li><%= login_helper("text-white") %></li>
         </ul>
       </div>
     </div>
@@ -25,7 +34,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
         <%= fa_icon "connectdevelop" %>
         </svg>
-      <strong>My Portfolio</strong>
+      <strong>Jamal AWAD</strong>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
