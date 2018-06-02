@@ -3,7 +3,8 @@
     <%= image_tag (portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?), class: "card-img-top" %>
     <div class="card-body">
       <p class="card-text">
-        <span><%= portfolio_item.title %></span><%= portfolio_item.subtitle %>
+        <span><%= portfolio_item.title %></span> |
+        <span><%= portfolio_item.subtitle %></span>
       </p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
