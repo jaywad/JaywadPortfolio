@@ -1,27 +1,47 @@
 <%= form_for(portfolio_item) do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <b><%= f.label :title %></b>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
+      <div class="form-group">
+        <b><%= f.label :subtitle %></b>
+        <%= f.text_field :subtitle, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+      <div class="form-group">
+        <b><%= f.label :main_image %></b>
+        <%= f.text_field :main_image, class: "form-control" %>
+      </div>
 
-  <ul>
-    <%= f.fields_for :technologies do |technology_form| %>
-    <li><%= technology_form.label :name %></li>
-    <li><%= technology_form.text_field :name %></li>
-    <% end %>
-  </ul>
-
-  <div class="actions">
-    <%= f.submit %>
+      <div class="form-group">
+        <b><%= f.label :thumb_image %></b>
+        <%= f.text_field :thumb_image, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <b><%= f.label :body %></b>
+        <%= f.text_area :body, class: "form-control", rows: 12 %>
+      </div>
+    </div>
   </div>
+  <hr>
+    <div class="col-md-6">
+      <h3>Technologies Used:</h3>
+      <div>
+        <%= f.fields_for :technologies do |technology_form| %>
+        <div class="form-group">
+          <%= technology_form.label :name %>
+          <%= technology_form.text_field :name, class: "form-control" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
+    </div>
 <% end %>
