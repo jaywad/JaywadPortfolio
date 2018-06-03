@@ -27,3 +27,4 @@
 
 # Hiding database file changes
 /config/database.yml
+.env
