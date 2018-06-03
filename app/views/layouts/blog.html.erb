@@ -21,8 +21,13 @@
 
       <main role="main" class="container">
         <div class="row">
+          
           <%= yield %>
+          
           <%= render "shared/blog_sidebar" %>
+
+          <%= paginate @blogs if !@blogs.nil? %>
+
         </div>
 
         <%= render "shared/blog_footer" %>
