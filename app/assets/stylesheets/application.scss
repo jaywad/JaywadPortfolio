@@ -29,7 +29,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 
 body {
@@ -42,7 +41,7 @@ body {
 }
 
 .cover-container {
-  max-width: 60em;
+  max-width: 80em;
 }
 
 
@@ -141,3 +140,20 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('home_bg.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
