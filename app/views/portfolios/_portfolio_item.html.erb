@@ -1,6 +1,6 @@
 <div class="col-md-4" data-id="<%= portfolio_item.id %>">
   <div class="card mb-4 box-shadow">
-    <%= image_tag (portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?), class: "card-img-top" %>
+    <%= image_tag (portfolio_item.thumb_image.to_s unless portfolio_item.thumb_image.to_s.nil?), height: "100%", width: "100%" %>
     <div class="card-body">
       <p class="card-text">
         <span><%= portfolio_item.title %></span> |
