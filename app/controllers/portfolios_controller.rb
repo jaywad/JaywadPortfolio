@@ -3,9 +3,9 @@ class PortfoliosController < ApplicationController
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
   
-	def index
-		@portfolio_items = Portfolio.by_position
-	end
+  def index
+    @portfolio_items = Portfolio.by_position
+  end
 
   def sort
     params[:order].each do |key, value|
@@ -17,10 +17,10 @@ class PortfoliosController < ApplicationController
     @angular_portfolio_items = Portfolio.angular
   end
 
-	def new
-		@portfolio_item = Portfolio.new
+  def new
+    @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build }
-	end
+  end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
