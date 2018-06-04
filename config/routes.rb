@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   # get 'pages/contact'
   get 'contact', to: 'pages#contact'
+
+  post 'message', to: 'pages#message'
   
   resources :blogs do
     member do

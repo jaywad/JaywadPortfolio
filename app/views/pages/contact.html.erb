@@ -1,25 +1,50 @@
 <h1>Would you like to work together?</h1>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="sign-up">
+        <div class="card">
+          <div class="card-body">
+            <h2>Send me a message</h2>
+            <br>
+            <% if notice %>
+            <p id="notice" class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <%= form_for @message, url: message_path do |f| %>
+              <div class="form-group">
+                <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name" %>
+              </div>
 
-<hr>
-<hr>
+              <div class="form-group">
+                <%= f.email_field :email, autocomplete: "off", class: "form-control", placeholder: "Email" %>
+              </div>
 
-<div class="row">
-  <div class="col-md-6">
+              <div class="form-group">
+                <%= f.text_area :message, class: "form-control", placeholder: "How can I help?", rows: 6 %>
+              </div>
 
-    <h3>Office Address</h3>
+              <div class="actions">
+                <%= f.submit "Send Message", class: "btn btn-dark btn-block" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>   
+    </div>
+    <div class="col-md-6" style="padding-top: 100px">
+      <h3>Office Address</h3>
 
-    <p>Lebanon, Zahle (Bekaa Governorate)</p>
+      <p>Lebanon, Zahle (Bekaa Governorate)</p>
 
-    <h3>Mobile</h3>
+      <h3>Mobile</h3>
 
-    <p><%= number_to_phone "9613701879" %></p>
+      <p><%= number_to_phone "9613701879" %></p>
 
-    <h3>Email</h3>
+      <h3>Email</h3>
 
-    <p><a href="mailto:jamalawad26@gmail.com?subject=Portfolio Contact" "Email me">Email me</a></p>
-  </div>
-
-  <div class="col-md-6">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.0188063334485!2d35.91965821556364!3d33.837625636456224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518cad197a820f5%3A0xb9c32763e6123f83!2sUNHCR+Zahle!5e0!3m2!1sen!2slb!4v1527930595323" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <p><a href="mailto:jamalawad26@gmail.com?subject=Portfolio Contact" "Email me">Email me</a></p>
+    </div>
   </div>
 </div>

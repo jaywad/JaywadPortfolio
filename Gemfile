@@ -87,3 +87,5 @@ gem 'carrierwave-aws', '~> 1.3'
 
 # Autoload dotenv in Rails
 gem 'dotenv-rails', '~> 2.4'
+
+gem 'telegram-bot-ruby'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_02_111047) do
+ActiveRecord::Schema.define(version: 2018_06_03_205733) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -20,8 +20,19 @@ ActiveRecord::Schema.define(version: 2018_06_02_111047) do
     t.string "slug"
     t.integer "status", default: 0
     t.bigint "topic_id"
+    t.bigint "user_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
+  end
+
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -88,5 +99,6 @@ ActiveRecord::Schema.define(version: 2018_06_02_111047) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blogs", "users"
   add_foreign_key "technologies", "portfolios", on_delete: :cascade
 end
