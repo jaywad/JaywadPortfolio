@@ -89,3 +89,6 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.4'
 
 gem 'telegram-bot-ruby'
+
+# Cocoon makes it easier to handle nested forms.
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
