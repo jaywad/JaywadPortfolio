@@ -26,7 +26,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio_item was successfully created.' }
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio item was successfully created.' }
       else
         format.html { render :new }
       end
