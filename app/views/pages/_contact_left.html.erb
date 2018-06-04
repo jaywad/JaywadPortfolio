@@ -3,9 +3,6 @@
     <div class="card-body">
       <h2>Send me a message</h2>
       <br>
-      <% if notice %>
-      <p id="notice" class="alert alert-success"><%= notice %></p>
-      <% end %>
       <%= form_for @message, url: message_path do |f| %>
         <div class="form-group">
           <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name" %>
