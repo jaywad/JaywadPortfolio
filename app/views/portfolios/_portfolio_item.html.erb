@@ -11,7 +11,7 @@
           <%= link_to "View", portfolio_show_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary"  %>
           <% if logged_in?(:site_admin) %>
           <%= link_to "Edit", edit_portfolio_path(portfolio_item.id), class: "btn btn-sm btn-outline-secondary" %>
-          <%= link_to "Delete", portfolio_path(portfolio_item.id), method: :delete, class: "btn btn-sm btn-outline-secondary" %>
+          <%= link_to "Delete", portfolio_path(portfolio_item.id), method: :delete, class: "btn btn-sm btn-outline-danger" %>
           <% end %>
         </div>
         <small class="text-muted"><%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %> ago</small>
