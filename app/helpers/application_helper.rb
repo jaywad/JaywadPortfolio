@@ -35,6 +35,10 @@ module ApplicationHelper
         title: "Portfolio"
       },
       {
+        url: tech_news_path,
+        title: "Tech News"
+      },
+      {
         url: about_me_path,
         title: "About Me"
       },

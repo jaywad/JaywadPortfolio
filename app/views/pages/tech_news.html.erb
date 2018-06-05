@@ -1,15 +1,20 @@
-<div class="row">
-  <div class="col-md-6"></div>
-  <div class="col-md-6">
-    <main role="main" class="inner cover">
-      <h1 class="cover-heading">Tech News</h1>
+<div class="album py-5">
+  <h1 class="cover-heading">Tech News</h1>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
       <% @tweets.each do |tweet| %>
-          <div class="tech-news">
-            <div class="card">
-              <%= twitter_parser tweet %>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow" style="width: 18rem;">          
+            <div class="card-body tech-news">
+              <p class="card-text">
+                <%= twitter_parser tweet %>
+              </p>
             </div>
           </div>
+        </div>
       <% end %>
-    </main>
+    </div>
   </div>
 </div>
