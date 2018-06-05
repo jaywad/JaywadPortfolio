@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   # get 'pages/contact'
   get 'contact', to: 'pages#contact'
 
+  get 'tech-news', to: 'pages#tech_news'
+
   post 'message', to: 'pages#message'
   
   resources :blogs do

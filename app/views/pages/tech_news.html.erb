@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Tech News</h1>
+      <% @tweets.each do |tweet| %>
+          <div class="tech-news">
+            <div class="card">
+              <%= tweet %>
+            </div>
+          </div>
+      <% end %>
+    </main>
+  </div>
+</div>

@@ -25,8 +25,12 @@ class PagesController < ApplicationController
     end
   end
 
-  private
+  def tech_news
+    @tweets = SocialTool.twitter_search
+  end
 
+  private
+  
   def contact_params
     params.require(:contact).permit(:name, 
                                     :email, 
