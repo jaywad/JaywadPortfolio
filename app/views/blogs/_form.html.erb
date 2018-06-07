@@ -20,6 +20,18 @@
                                   %>
   </div>
 
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary <%= 'active' if blog.draft? %>">
+      <%= form.radio_button :status, "draft" %>Draft
+    </label>
+    <label class="btn btn-secondary <%= 'active' if blog.published? %>">
+      <%= form.radio_button :status, "published" %>Published
+    </label>
+  </div>
+  
+  <br>
+  <br>
+  
   <div class="form-group">
     <%= form.label :body %>
     <%= form.text_area :body, class: "form-control", rows: "20" %>
