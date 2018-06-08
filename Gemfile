@@ -72,3 +72,5 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 # markdown parser and language syntax highlighting gems
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+ruby "2.6.0"
