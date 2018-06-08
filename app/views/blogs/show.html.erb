@@ -1,13 +1,28 @@
 <div class="col-md-8 blog-main">
 
   <h1><%= @blog.title %></h1>
-  
-  <p><%= @blog.topic.title %></p>
 
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <b><p class="breadcrumb-item active"><%= link_to @blog.topic.title, @blog.topic %></p></b>
+
+  <nav aria-label="breadcrumb" class="breadcrumb ">
+    <%= link_to "Home", root_path, class: "breadcrumb-item" %>
+    <%= link_to @blog.topic.title, @blog.topic, class: "breadcrumb-item" %>
+    <span class="breadcrumb-item active"><%= @blog.title %></span>
+
+    <% if logged_in?(:site_admin) %>
+      <span class="breadcrumb-item float-right">
+        <%= link_to fa_icon("pencil-square-o"), edit_blog_path(@blog) %>
+      </span>
+      <span class="breadcrumb-item float-right">
+        <%= link_to fa_icon("trash"), @blog, method: :delete, data: { confirm: 'Are you sure want to delete this blog post?' } %>
+      </span>
+    <% end %>
+  </nav>
 
   <p><%= markdown @blog.body %></p>
 
+  <hr>
+  
   <%= render "comments/comment_form" %>
 
   <br>
@@ -18,4 +33,3 @@
 
   <br>
 </div>
-
