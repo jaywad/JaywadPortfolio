@@ -3,6 +3,21 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "profile2.jpg", width: 300, class: "profile-img" %>
+
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div 
+                class="progress-bar progress-bar-striped bg-success" 
+                role="progressbar" 
+                aria-valuenow="<%= skill.percent_utilized %>%"
+                aria-valuemax="100"
+                style="width: <%= skill.percent_utilized %>%"><%= skill.percent_utilized %>%
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
       
       <div class="col-md-8">
@@ -10,6 +25,142 @@
         <p>Creative and dedicated developer with over five years of professional experience in large international organizations in senior capacities which I thrived through my commitment to continuously discover, evaluate, and implement new technologies to maximize development efficiency.</p> 
 
         <p>My experience includes strong knowledge of project management, planning and control, database platforms, Ruby on Rails for back-end web development, AngularJS for front-end development, android mobile development, data security establishment and client-server networking hands on expertise.</p>
+
+        <p>
+          <button 
+            class="btn btn-info" 
+            data-toggle="collapse" 
+            href="#jobHistory" 
+            role="button" 
+            aria-expanded="false" 
+            aria-controls="jobHistory">Job History
+          </button>
+
+          <button 
+            class="btn btn-dark" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#education" 
+            aria-expanded="false" 
+            aria-controls="education">Education
+          </button>
+
+          <button 
+            class="btn btn-success" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#projects" 
+            aria-expanded="false" 
+            aria-controls="projects">Projects
+          </button>
+        </p>
+
+        <div class="collapse" id="jobHistory">
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "unhcr.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Assistant Data Management Officer (Cash)</b><br>
+                UNHCR<br>
+                <small class="text-muted">Apr 2016 - Present - Lebanon • <%= distance_of_time_in_words(Time.parse('2016-04-01'), Time.now) %></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "unhcr.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Senior Data Management Assistant (Cash)</b><br>
+                UNHCR<br>
+                <small class="text-muted">May 2015 - Apr 2016 - Lebanon • 2 years</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "drc.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Data Management Officer</b><br>
+                Danish Refugee Council<br>
+                <small class="text-muted">May 2013 - May 2014 - Lebanon • 1 year 1 mo</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "rio.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Database Administrator</b><br>
+                RIO Trading<br>
+                <small class="text-muted">Aug 2012 - May 2013 - Lebanon • 10 mos</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "rio.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Android Developer</b><br>
+                Freelance, self-employed<br>
+                <small class="text-muted">Jan 2011 - Dec 2012 - Lebanon • 2 years</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <%= image_tag "rio.jpg", width: "100%" %>
+              </div>
+              <div class="col-md-10">
+                <b>Project Manager</b><br>
+                Youth Council | مجلس الشباب<br>
+                <small class="text-muted">Sep 2015 - Mar 2016 - Lebanon • 7 mos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse" id="education">
+          <div class="card card-body">
+            <b>Lebanese International University</b>
+            Master's degree, Computer Software Engineering<br>
+            <small class="text-muted">2015 • On-hold</small>
+          </div>
+
+          <div class="card card-body">
+            <b>Lebanese International University</b>
+            Bachelor of Science (BS), Computer Science<br>
+            <small class="text-muted">2009 - 2013</small>
+          </div>
+
+          <div class="card card-body">
+            <b>United Nations - UNRWA</b>
+            High School Diploma - Lebanese Baccalaureate Life Science<br>
+            <small class="text-muted">2008 - 2009</small>
+          </div>
+        </div>
+
+        <div class="collapse" id="projects">
+          <div class="card card-body">
+            <b>Loading...</b>
+            <small class="text-muted">Great ideas are coming up soon 💻🌎</small><br>
+          </div>
+        </div>
       </div>
     </div>
   </div>
