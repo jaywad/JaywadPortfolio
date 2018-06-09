@@ -26,6 +26,5 @@
 /config/master.key
 
 # Hiding database file changes
-/config/database.yml
 .env
 /config/secrets.yml
