@@ -2,7 +2,7 @@ module TelegramMessage
   extend ActiveSupport::Concern
   require 'telegram/bot'
 
-  TOKEN = Rails.application.secrets[:telegram][:bot][:token]
+  TOKEN = ENV["TELEGRAM_TOKEN"]
 
   BOT = Telegram::Bot::Client.new(TOKEN)
 end
