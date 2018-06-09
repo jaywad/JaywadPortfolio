@@ -14,23 +14,18 @@
     <%= form.label :topic_id %>
     <%= form.collection_select(:topic_id, Topic.all, :id, :title, 
                                   {
-                                    selected: (blog.topic.id if !blog.topic.nil?),
                                     include_blank: true
                                   },class: "form-control") 
                                   %>
   </div>
 
-  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary <%= 'active' if blog.draft? %>">
-      <%= form.radio_button :status, "draft" %>Draft
-    </label>
-    <label class="btn btn-secondary <%= 'active' if blog.published? %>">
-      <%= form.radio_button :status, "published" %>Published
-    </label>
+  <div class="form-group">
+    <%= form.radio_button :status, 'draft' %>
+    <%= form.label :status, 'Draft' %>
+
+    <%= form.radio_button :status, 'published' %>
+    <%= form.label :status, 'Published' %>
   </div>
-  
-  <br>
-  <br>
   
   <div class="form-group">
     <%= form.label :body %>
