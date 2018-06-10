@@ -1,4 +1,4 @@
-<div class="col-md-8 blog-main">
+<div class="col-md-8 blog-main blog-show">
 
   <h1><%= @blog.title %></h1>
 
@@ -18,6 +18,14 @@
       </span>
     <% end %>
   </nav>
+
+  <div>
+    <% if @blog.main_image.to_s == "" %>
+      <%= image_tag image_generator(height: "350", width: "200"), width: "100%" %>
+    <% else %>
+      <%= image_tag @blog.main_image.to_s, width: "100%" %>
+    <% end %>
+  </div>
 
   <p><%= markdown @blog.body %></p>
 

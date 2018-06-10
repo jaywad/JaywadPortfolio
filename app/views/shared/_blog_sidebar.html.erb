@@ -1,4 +1,4 @@
-<aside class="col-md-4 blog-sidebar">
+<aside class="col-md-4 blog-sidebar blog-show">
   <div class="p-3 mb-3 bg-light rounded">
     <h4 class="font-italic">About</h4>
     <p class="mb-0"><em>We are what we repeatedly do, so then excellence is not an act, but a habit. The more time you put into something, the better results you'll be getting out of it. So here's your overnight success story in a nutshell. Every day is special, we just gotta make it that way.</em></p>
@@ -6,7 +6,9 @@
 
   <%= source_helper("alert alert-primary") %>
 
-  <%= render "topics/widget" %>
+  <% if !@side_bar_topics.nil? %>
+    <%= render "topics/widget" %>
+  <% end %>
 
   <div class="p-3">
     <h4 class="font-italic">Elsewhere</h4>

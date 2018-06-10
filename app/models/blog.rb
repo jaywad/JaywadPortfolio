@@ -7,6 +7,8 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body, :topic_id
 
+  mount_uploader :main_image, PortfolioUploader
+
   belongs_to :topic
   belongs_to :user
   has_many :comments, dependent: :destroy
