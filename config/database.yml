@@ -48,4 +48,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-    url: <%= ENV["CLEARDB_DATABASE_URL"] %>
+  adapter: mysql2
+  username: <%= ENV["JAYWADPORTFOLIO_DATABASE_USERNAME"] %>
+  password: <%= ENV["JAYWADPORTFOLIO_DATABASE_PASSWORD"] %>

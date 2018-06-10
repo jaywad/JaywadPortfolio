@@ -1,11 +1,14 @@
 # Change these
-server '159.65.24.123', port: 80, roles: [:web, :app, :db], primary: true
+server '159.65.24.123', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@gitlab.com:jaywad/jaywad-portfolio.git'
 set :application,     'jaywad-portfolio'
 set :user,            'jaywad'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
+
+set :rbenv_type, :user
+set :rbenv_ruby, "2.6.0-dev"
 
 # Don't change these unless you know what you're doing
 set :pty,             true
