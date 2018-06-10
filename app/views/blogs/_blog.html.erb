@@ -5,11 +5,7 @@
   <%= render partial: "blogs/admin_actions", locals: {blog: blog } %>
 
   <div>
-    <% if blog.main_image.to_s == "" %>
-      <%= image_tag image_generator(height: "350", width: "200"), width: "100%" %>
-    <% else %>
-      <%= image_tag blog.main_image.to_s, width: "100%" %>
-    <% end %>
+    <%= image_tag blog.main_image.to_s, width: "100%" %>
   </div>
 
   <p><%= markdown blog.body %></p>
