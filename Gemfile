@@ -13,7 +13,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-	gem 'pry-byebug'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -75,4 +75,10 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
-ruby "2.6.0"
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rbenv',   require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+end
