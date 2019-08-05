@@ -51,7 +51,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 
 # Manipulate images with minimal use of memory
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 
 # Use aws-sdk for S3 support in CarrierWave
 gem 'carrierwave-aws', '~> 1.3'
