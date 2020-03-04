@@ -31,7 +31,7 @@ gem 'friendly_id', '~> 5.1.0'
 # Authentication gem - implementation of features
 gem 'devise', '~> 4.7'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 
 gem 'copyright_tool', '~> 0.1.0'
 
